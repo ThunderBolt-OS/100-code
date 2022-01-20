@@ -1,6 +1,5 @@
-package Recursion.sortingarrays;
+package Recursion.Sorting;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class BubbleSort {
