@@ -19,7 +19,7 @@ class Solution {
 
         return merge(left, right);
     }
-     ListNode merge(ListNode list1, ListNode list2){
+     private ListNode merge(ListNode list1, ListNode list2){
         ListNode dummyHead = new ListNode();
         ListNode tail = dummyHead;
 
@@ -37,7 +37,7 @@ class Solution {
         tail.next = (list1 != null) ? list1 : list2;
         return dummyHead.next;
     }
-     ListNode middleNode(ListNode head) {
+     private ListNode middleNode(ListNode head) {
         ListNode midPrev = null;
         
 
