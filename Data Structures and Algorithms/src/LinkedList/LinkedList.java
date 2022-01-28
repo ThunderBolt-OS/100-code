@@ -82,7 +82,7 @@ public class LinkedList {
         if (index == size-1){
             return deleteLast();
         }
-        Node prev = get(index-1);
+        Node prev = getValue(index-1);
         int val = prev.next.value;
         prev.next = prev.next.next;
 
@@ -92,20 +92,43 @@ public class LinkedList {
         if (size <= 1){
             return deleteFirst();
         }
-        Node secondLast = get(size-2);
+        Node secondLast = getValue(size-2);
         int val = tail.value;
         tail = secondLast;
         tail.next = null;
 
         return val;
     }
-    public Node get(int index){
+    public Node getValue(int index){
         Node node = head;
         for (int i = 0; i < index; i++) {
             node = node.next;
         }
         return node;
     }
+
+    public void reverse(){
+        if(size < 2){
+            return;
+        }
+        Node prev = null;
+        Node present = head;
+        Node next = present.next;
+
+        while(present != null){
+            present.next = prev;
+            prev = present;
+            present = next;
+
+            if (next != null){
+                next = next.next;
+            }
+        }
+        head = prev;
+        return;
+
+    }
+
     public void display(){
         Node temp = head;
         while(temp != null){

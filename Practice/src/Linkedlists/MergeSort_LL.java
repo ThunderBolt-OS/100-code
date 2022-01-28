@@ -23,7 +23,14 @@ public class MergeSort_LL {
         }
     }
     public ListNode sortList(ListNode head) {
+        if(head == null || head.next == null){
+            return head;
+        }
+        ListNode mid = middleNode(head);
+        ListNode left = sortList(head);
+        ListNode right = sortList(mid);
 
+        return merge(left, right);
     }
     ListNode merge(ListNode list1, ListNode list2){
         ListNode dummyHead = new ListNode();
