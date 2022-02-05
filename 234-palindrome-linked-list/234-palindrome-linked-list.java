@@ -9,7 +9,7 @@
  * }
  */
 class Solution {
-    private static ListNode middleNode(ListNode head) {
+    static ListNode middleNode(ListNode head) {
         ListNode slow = head;
         ListNode fast = head;
 
@@ -19,7 +19,7 @@ class Solution {
         }
         return slow;
     }
-    private static ListNode reverse(ListNode head){
+    static ListNode reverse(ListNode head){
         if (head == null){
             return head;
         }
