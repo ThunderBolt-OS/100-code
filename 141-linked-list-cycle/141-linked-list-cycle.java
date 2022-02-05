@@ -1,15 +1,16 @@
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) {
- *         val = x;
- *         next = null;
- *     }
- * }
- */
-public class Solution {
+package Linkedlists.141-linked-list-cycle;
+
+
+class CycleLinkedLists {
+//    Definition for singly-linked list.
+    class ListNode {
+        int val;
+        ListNode next;
+        ListNode(int x) {
+            val = x;
+            next = null;
+        }
+    }
     public boolean hasCycle(ListNode head) {
         ListNode fast = head;
         ListNode slow = head;

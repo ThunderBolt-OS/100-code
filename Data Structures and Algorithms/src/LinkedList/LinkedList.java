@@ -107,7 +107,7 @@ public class LinkedList {
         return node;
     }
 
-    public void reverse(){
+    public void reverse(){ //using iterative
         if(size < 2){
             return;
         }
@@ -127,6 +127,16 @@ public class LinkedList {
         head = prev;
         return;
 
+    }
+    public void Reverse(Node node){ // using recursion
+        if(node == tail){
+            head = tail;
+            return;
+        }
+        Reverse(node.next);
+        tail.next = node;
+        tail = node;
+        tail.next = null;
     }
 
     public void display(){
