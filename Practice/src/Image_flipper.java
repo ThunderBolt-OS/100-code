@@ -1,11 +1,13 @@
+import java.util.Arrays;
+
 //https://leetcode.com/problems/flipping-an-image/
 
-import java.util.Arrays;
+
 
 class Image_flipper {
     public static void main(String[] args) {
         int[][] image = {{1,1,0}, {1,0,1}, {0,0,0}};
-//        System.out.println(Arrays.toString(flipAndInvertImage(image)));
+       System.out.println(Arrays.toString(flipAndInvertImage(image)));
     }
 
 
