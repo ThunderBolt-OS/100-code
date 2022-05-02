@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
         "Practice/src",
-        "Data Structures and Algorithms/src/Recursion/Strings"
+        "Data Structures and Algorithms/src/Recursion/Strings",
+        "Data Structures and Algorithms/src/Sorting"
     ]
 }
