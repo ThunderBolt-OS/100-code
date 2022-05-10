@@ -35,15 +35,18 @@ public class HeapSort {
         }
     }
     
+    // creating a Max heap
     public static void heapify(int[] arr, int n, int i) {
         int largest = i;
         int l = 2 * i + 1;
         int r = 2 * i + 2;
 
+        // checking if the left child is greater than parent or not
         if (l < n && arr[l] > arr[largest]) {
             largest = l;
         }
 
+        // checking if the right child is greater than parent or not
         if (r < n && arr[r] > arr[largest]) {
             largest = r;
         }
@@ -51,6 +54,28 @@ public class HeapSort {
         if (largest != i) {
             swap(arr, i, largest);
             heapify(arr, n, largest);
+        }
+    }
+
+    // creating a Min heap
+    public static void heapifyMin(int[] arr, int n, int i) {
+        int smallest = i;
+        int l = 2 * i + 1;
+        int r = 2 * i + 2;
+
+        // checking if the left child is greater than parent or not
+        if (l < n && arr[l] < arr[smallest]) {
+            smallest = l;
+        }
+
+        // checking if the right child is greater than parent or not
+        if (r < n && arr[r] < arr[smallest]) {
+            smallest = r;
+        }
+
+        if (smallest != i) {
+            swap(arr, i, smallest);
+            heapifyMin(arr, n, smallest);
         }
     }
 
