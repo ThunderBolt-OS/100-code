@@ -118,51 +118,32 @@ public class StrassenMatrixMultiplication {
 	// Function to subtract two matrices
 	public int[][] sub(int[][] A, int[][] B)
 	{
-		//
-		int n = A.length;
-
-		//
+		
+		int n = A.length;		
 		int[][] C = new int[n][n];
 
-		// Iterating over elements of 2D matrix
-		// using nested for loops
-
-		// Outer loop for rows
 		for (int i = 0; i < n; i++)
-
-			// Inner loop for columns
 			for (int j = 0; j < n; j++)
 
-				// Subtracting corresponding elements
-				// from matrices
 				C[i][j] = A[i][j] - B[i][j];
 
-		// Returning the resultant matrix
 		return C;
 	}
 
-	// Method 3
-	// Function to add two matrices
+
 	public int[][] add(int[][] A, int[][] B)
 	{
-
-		//
+		
 		int n = A.length;
 
-		// Creating a 2D square matrix
 		int[][] C = new int[n][n];
 
-		// Iterating over elements of 2D matrix
-		// using nested for loops
 
-		// Outer loop for rows
+
 		for (int i = 0; i < n; i++)
-
-			// Inner loop for columns
 			for (int j = 0; j < n; j++)
 
-				// Adding corresponding elements
-				// of matrices
+
 				C[i][j] = A[i][j] + B[i][j];
 
 		// Returning the resultant matrix
